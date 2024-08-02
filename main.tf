@@ -70,7 +70,7 @@ resource "aws_cognito_user_pool_domain" "main" {
 }
 
 module "ssm_params" {
-  source = "../ssm-parameters-store"
+  source  = "birkoff/ssm-params/aws"
   parameters = {
     "cognito_userpool_arn" = {
       name  = "/platform/cognito_userpool_arn"
